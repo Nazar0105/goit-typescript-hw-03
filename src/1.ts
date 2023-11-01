@@ -1,19 +1,19 @@
-/*
-  Клас Student, який містить три властивості: name, age та grade. 
-  Замість того, щоб оголошувати ці властивості в тілі класу, потім у конструкторі, і нарешті надавати їм значення, 
-  напишіть скорочену ініціалізацію.
-*/
+
+// Для скороченої ініціалізації я можу використовувати модифікатори доступу у
+// конструкторі для автоматичної ініціалізації властивостей класу.Ось як це можна зробити:
 
 class Student {
-  public name: string;
-  public age: number;
-  public grade: string;
-
-  constructor(name: string, age: number, grade: string) {
-    this.name = name;
-    this.age = age;
-    this.grade = grade;
-  }
+  constructor(public name: string, public age: number, public grade: string) {}
 }
 
-export {};
+// Приклад використання:
+const student = new Student('John', 20, 'A');
+console.log(student.name); // "John"
+console.log(student.age);  // 20
+console.log(student.grade);  // "A"
+
+// У цьому коді я використовую модифікатор public в конструкторі для автоматичної 
+// ініціалізації властивостей name, age та grade класу Student.При створенні 
+// об'єкта student властивості будуть ініціалізовані з переданими значеннями.
+
+
